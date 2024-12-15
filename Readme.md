@@ -4,7 +4,7 @@ Here’s a step-by-step guide to creating a **To-Do List Application** in Python
 
 ---
 
-### **Step 1: Define the Requirements**
+## **Step 1: Define the Requirements**
 
 Before coding, list the features you want:
 
@@ -16,7 +16,7 @@ Before coding, list the features you want:
 
 ---
 
-### **Step 2: Plan the Application Structure**
+## **Step 2: Plan the Application Structure**
 
 - Use a list to store tasks.
 - Each task can be a dictionary with properties like:
@@ -26,9 +26,9 @@ Before coding, list the features you want:
 
 ---
 
-### **Step 3: Write the Code**
+## **Step 3: Write the Code**
 
-#### **1. Initialize the Project**
+### **1. Initialize the Project**
 
 Start with a basic structure:
 
@@ -51,7 +51,7 @@ def display_menu():
 
 ---
 
-#### **2. Add a Task**
+### **2. Add a Task**
 
 Create a function to add tasks:
 
@@ -65,7 +65,7 @@ def add_task():
 
 ---
 
-#### **3. View All Tasks**
+### **3. View All Tasks**
 
 Create a function to display tasks:
 
@@ -83,7 +83,7 @@ def view_tasks():
 
 ---
 
-#### **4. Mark a Task as Completed**
+### **4. Mark a Task as Completed**
 
 Create a function to update task status:
 
@@ -100,7 +100,7 @@ def mark_task_completed():
 
 ---
 
-#### **5. Delete a Task**
+### **5. Delete a Task**
 
 Create a function to delete tasks:
 
@@ -114,7 +114,7 @@ def delete_task():
 
 ---
 
-#### **6. Save and Load Tasks**
+### **6. Save and Load Tasks**
 
 Use `json` to save and load tasks:
 
@@ -138,7 +138,7 @@ def load_tasks():
 
 ---
 
-#### **7. Create the Main Program Loop**
+### **7. Create the Main Program Loop**
 
 Bring everything together:
 
@@ -168,7 +168,7 @@ while True:
 
 ---
 
-### **Step 4: Test the Application**
+## **Step 4: Test the Application**
 
 1. Run the program.
 2. Test each feature:
@@ -180,7 +180,7 @@ while True:
 
 ---
 
-### **Step 5: Enhance the Application**
+## **Step 5: Enhance the Application**
 
 After implementing the basic version, you can add these features:
 
