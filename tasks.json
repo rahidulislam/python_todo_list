@@ -1,0 +1,7 @@
+[
+  { "id": 1, "title": "wake up", "completed": false },
+  { "id": 2, "title": "read quran", "completed": false },
+  { "id": 3, "title": "pray fajar", "completed": true },
+  { "id": 4, "title": "walking in the morning", "completed": false },
+  { "id": 5, "title": "take shower", "completed": false }
+]
