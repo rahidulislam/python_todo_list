@@ -32,6 +32,32 @@ def update_tasks_list():
             task_text += " (Completed)"
         task_listbox.insert(tk.END, task_text)
 
+def edit_task():
+    try:
+        # get the selected task
+        selected_index = task_listbox.curselection()[0]
+        selected_task = tasks[selected_index]['title']
+        # display selected task in entry field
+        task_entry.delete(0, tk.END)
+        task_entry.insert(0, selected_task)
+
+        #save the selected task globally for updateing later
+        global edit_index
+        edit_index = selected_index
+    except IndexError:
+        messagebox.showwarning("warning","No task selected")
+
+def save_edit_task():
+    try:
+        new_task = task_entry.get()
+        if new_task.strip():
+            tasks[edit_index]["title"] = new_task
+            update_tasks_list()
+            task_entry.delete(0, tk.END)
+        else:
+            messagebox.showwarning("warning","Task cannot be empty")
+    except IndexError:
+        messagebox.showwarning("warning","No task selected")
 def delete_task():
     selected = task_listbox.curselection()
     if selected:
@@ -76,6 +102,14 @@ task_entry.pack(pady=10)
 # add task button
 add_task_button = tk.Button(root, text="Add Task", command=add_task, bg=dark_theme_colors["button_bg"], fg=dark_theme_colors["button_fg"])
 add_task_button.pack(pady=10)
+
+# edit task button
+edit_task_button = tk.Button(root, text="Edit Task", command=edit_task, bg=dark_theme_colors["button_bg"], fg=dark_theme_colors["button_fg"])
+edit_task_button.pack(pady=5)
+
+# save edit task button
+save_edit_task_button = tk.Button(root, text="Save Edit Task", command=save_edit_task, bg=dark_theme_colors["button_bg"], fg=dark_theme_colors["button_fg"])
+save_edit_task_button.pack(pady=5)
 
 # mark button as completed
 mark_button = tk.Button(root, text="Mark as Completed", command=mark_completed)
